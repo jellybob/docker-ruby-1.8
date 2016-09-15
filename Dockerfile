@@ -5,7 +5,7 @@ RUN apt-get install -y software-properties-common && \
     apt-get update && \
     apt-get install -y ruby1.8 rubygems1.8 ruby-switch
 RUN ruby-switch --set ruby1.8
-RUN echo 'gem: --no-rdoc --no-ri >> "$HOME/.gemrc"'
+RUN echo 'gem: --no-rdoc --no-ri' >> "$HOME/.gemrc"
 
 # Configure Bundler to install everything globally
 ENV GEM_HOME /usr/local/bundle
